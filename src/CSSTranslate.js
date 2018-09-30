@@ -1,5 +1,6 @@
-export default (position, axis) => {
-    const positionCss = (axis === 'horizontal') ? [position, 0, 0] : [0, position, 0];
+export default (position, axis, rtl) => {
+    const getPosition = rtl ? position.replace('-', '') : position;
+    const positionCss = (axis === 'horizontal') ? [getPosition, 0, 0] : [0, getPosition, 0];
     const transitionProp = 'translate3d';
 
     const translatedPosition = '(' + positionCss.join(',') + ')';

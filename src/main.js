@@ -24,6 +24,7 @@ const DemoCarousel = () => (
         onClickItem={_onClickItem}
         onChange={_onChange}
         onClickThumb={_onClickThumb}
+        rtl={true}
     >
         <div>
             <img src="assets/1.jpeg" />
